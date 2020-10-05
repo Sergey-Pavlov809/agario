@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
-      "module": "system",
+      "outDir": "./dist/",
+      "moduleResolution": "node",
+      "sourceMap": true,
       "noImplicitAny": true,
-      "removeComments": true,
-      "preserveConstEnums": true,
-      "sourceMap": true
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "**/*.spec.ts"]
+      "module": "es6",
+      "target": "es5",
+      "jsx": "react",
+      "allowJs": true
     }
+  }

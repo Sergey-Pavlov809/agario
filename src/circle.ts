@@ -1,7 +1,5 @@
-import p5 from 'p5';
-
-
-
+// import p5 from 'p5';
+const p5 = require('../node_modules/p5/lib/p5');
 export class Circle {
     pos: number;
     r: number;
@@ -15,15 +13,10 @@ export class Circle {
         this.r = r;
         this.vel = s.createVector(0, 0);
 
-
-
         this.show = function () {
             s.fill(255);
             s.ellipse(this.pos.x, this.pos.y, this.r * 2, this.r * 2);
         };
-
-
-
 
         this.update = function () {
             const newvel = s.createVector(s.mouseX - s.width / 2, s.mouseY - s.height / 2);
@@ -35,8 +28,6 @@ export class Circle {
             this.pos.add(this.vel);
         };
 
-
-        
         this.eats = function (other: any) {
             var d = p5.Vector.dist(this.pos, other.pos);
             if (d < this.r + other.r) {
@@ -49,4 +40,5 @@ export class Circle {
             }
         };
     }
+
 }
